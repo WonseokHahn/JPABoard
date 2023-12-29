@@ -25,7 +25,7 @@ public class SecurityConfig {
 
         http
                 .authorizeHttpRequests((request) -> request
-                        .requestMatchers("/account/login", "/dist/**", "/plugins/**", "/accountApi/setPassword").permitAll()
+                        .requestMatchers("/account/login", "/dist/**", "/plugins/**", "/accountApi/setPassword", "/layout/page").permitAll()
                         .anyRequest().authenticated())
                 // HTTP 요청에 대한 인가 규칙을 설명한다.
                 // permitAll() : 누구나 접근할수 있도록 허용
